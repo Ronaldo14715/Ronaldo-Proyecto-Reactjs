@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.mainContainer{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 76vh;
+}
+
+.navContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #776B5D;
+    z-index: 1;
+}
+.navContainer .img-nav{
+    width: 3rem;
+}
+
+.list-nav{
+    display: flex;
+    gap: 1rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-nav li .a-li-nav{
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: white;
+    font-family: "Poppins";
+    font-weight: 500;
+    
+}
+
+.list-nav li .a-li-nav::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 0.1rem;
+    background-color: #D6C0B3;
+    transition: width .5s;
+    margin: 0 auto;
+    transform-origin: center;
+}
+
+.list-nav li .a-li-nav:hover::after{
+    width: 100%;
+}
+
+.cart-image{
+    width: 3rem;
+}
+
+.footerContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem;
+    background-color: #776B5D;
+}
+
+.container-footer-link{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container-footer-link a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.container-footer-link a:hover{
+    color: #000;
+    transform: scale(1.2);
+}
+
+.container-footer-name p{
+    font-family: "Poppins";
+    font-size: 1rem;
+    margin: 0;
+    color: #fff;
+}
