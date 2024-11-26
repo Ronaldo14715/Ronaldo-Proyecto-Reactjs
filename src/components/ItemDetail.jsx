@@ -7,12 +7,22 @@ const ItemDetail = ({producto}) => {
         alert(`Agregaste al carrito ${cantidad} productos`)
     }
   return (
-    <div>
-        <h1>Detalle del producto:{producto.name}</h1>
-        <img src={producto.img} alt={producto.img}/>
-        <p>{producto.description}</p>
-        <p>${producto.price}</p>
-        <ItemCount stock={producto.stock} onAdd={onAdd}/>
+    <div className='containerProductsDetails'>
+        <div className='productDetailsTitle'>
+          <p>Detalle del producto: {producto.name}</p>
+        </div>
+        <div className='productDetailsBody'>
+          <div className='detailBodyContainerImg'>
+            <img className='detailBodyImg' src={producto.img} alt={producto.img}/>
+            </div>
+          <div className='detailBodyContainerData'>
+            <div className='detailBodyDataProducto'>
+              <p className='detailBodyDataDescripcion'>{producto.description}</p>
+              <p className='detailBodyDataPrice'>S/.{producto.price}</p>
+            </div>
+            <ItemCount stock={producto.stock} onAdd={onAdd}/>
+          </div>
+        </div>
     </div>
   )
 }

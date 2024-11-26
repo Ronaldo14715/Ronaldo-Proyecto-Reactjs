@@ -1,7 +1,7 @@
 const productos = [
     {
         id: '1',
-        name: 'Polo nike modelo',
+        name: 'POLO NIKE',
         stock: 5,
         price: 40,
         description: 'Polo Algodón Hombre Nike',
@@ -10,7 +10,7 @@ const productos = [
     },
     {
         id: '2',
-        name: 'Polo adidas modelo',
+        name: 'POLO ADIDAS',
         stock: 20,
         price: 30,
         description: 'Polo Algodón Hombre Adidas',
@@ -19,7 +19,7 @@ const productos = [
     },
     {
         id: '3',
-        name: 'Polo Puma',
+        name: 'POLO PUMA',
         stock: 30,
         price: 50,
         description: 'Polo Algodón Hombre Puma',
@@ -28,16 +28,16 @@ const productos = [
     },
     {
         id: '4',
-        name: 'Casaca QuikSilver',
+        name: 'CASACA ADIDAS',
         stock: 20,
-        price: 150,
-        description: 'Casaca Hombre QuikSilver',
-        img: '../src/assets/img/casaca1.jpg',
+        price: 100,
+        description: 'Casaca Hombre Adidas',
+        img: '../src/assets/img/casaca4.webp',
         category: 'nuevos'
     },
     {
         id: '5',
-        name: 'Casaca Lacoste',
+        name: 'CASACA LACOSTE',
         stock: 20,
         price: 250,
         description: 'Casaca Hombre Lacoste',
@@ -46,7 +46,7 @@ const productos = [
     },
     {
         id: '6',
-        name: 'Casaca Mlb',
+        name: 'CASACA MLB',
         stock: 10,
         price: 200,
         description: 'Casaca Hombre Mlb Varsity',
@@ -55,7 +55,7 @@ const productos = [
     },
     {
         id: '7',
-        name: 'Pantalon lacoste',
+        name: 'PANTALON LACOSTE',
         stock: 30,
         price: 150,
         description: 'Pantalon Urbano Slim Hombre Lacoste',
@@ -64,7 +64,7 @@ const productos = [
     },
     {
         id: '8',
-        name: 'Pantalon Quiksilver',
+        name: 'PANTALON QUIKSILVER',
         stock: 20,
         price: 200,
         description: 'Pantalon Buzo Jogger Hombre Quiksilver',
@@ -73,7 +73,7 @@ const productos = [
     },
     {
         id: '9',
-        name: 'Pantalon Levis',
+        name: 'PANTALON LEVIS',
         stock: 30,
         price: 300,
         description: 'Pantalon Casual Jogger Hombre Levis ',
@@ -92,7 +92,7 @@ export const getProducts = () =>{
             }else{
                 resolve(productos)
             }
-        },1000)
+        },500)
     })
 }
 
@@ -106,6 +106,6 @@ export const getOneProduct = (id) =>{
                 let product = productos.find((item) => item.id === id)
                 resolve(product)
             }
-        },1000)
+        },500)
     })
 }

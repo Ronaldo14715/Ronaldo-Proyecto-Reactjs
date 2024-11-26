@@ -9,7 +9,7 @@
 .mainContainer{
     display: grid;
     grid-template-rows: auto 1fr auto;
-    min-height: 76vh;
+    min-height: 100vh;
 }
 
 .navContainer{
@@ -64,6 +64,153 @@
     width: 3rem;
 }
 
+.containerMain{
+    padding: 1rem;
+}
+
+.containerMain .containerProducts{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    place-items: center center;
+    gap: 2.5rem;
+}
+.containerMain .containerProducts .card{
+    width: 33,3%;
+    outline: 3px solid #776B5D;
+}
+
+.containerMain .containerProducts .card .card-img{
+    width: 100%;
+    border-bottom: 3px dashed #4470c4;
+}
+
+.containerMain .containerProducts .card .card-body{
+    padding: 0.5rem 2rem 0 2rem;
+    font-family: "Poppins";
+}
+
+.containerMain .containerProducts .card .card-body .card-title{
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.containerMain .containerProducts .card .card-body .card-description{
+    font-size: 0.9rem;
+}
+.containerMain .containerProducts .card .card-body .card-price{
+    padding: 1rem 0 0 1rem;
+    font-size: 1.5rem;
+    color: #776b5D;
+    font-weight: 800;
+    text-align: center;
+}
+
+.containerMain .containerProducts .card .card-footer{
+    padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.containerMain .containerProducts .card .card-footer .card-button{
+    padding: 0.8rem;
+    width: 80%;
+    background-color: #776B5D;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 800;
+    transition: background-color 0.5s ease;
+}
+.containerMain .containerProducts .card .card-footer .card-button:hover{
+    background-color: #a0907d;
+}
+
+.containerMainDetail{
+    padding: 1rem;
+}
+
+.containerMainDetail .containerProductsDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.containerMainDetail .containerProductsDetails .productDetailsTitle p{
+    font-size: 1.8rem;
+    font-family: "Poppins";
+}
+
+.containerMainDetail .containerProductsDetails .productDetailsBody{
+    width: 50%;
+    display: flex;
+    margin: 3rem 0 0 0;
+    border: 1rem double #776B5D;
+    padding: 1rem;
+}
+
+
+.containerMainDetail .containerProductsDetails .productDetailsBody .detailBodyContainerImg,
+.containerMainDetail .containerProductsDetails .productDetailsBody .detailBodyContainerImg .detailBodyImg{
+    width: 100%;
+}
+.containerMainDetail .containerProductsDetails .productDetailsBody .detailBodyContainerData{
+    width: 100%;
+    border: 1px solid black;
+    padding: 1rem;
+    font-family: "Poppins";
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.containerMainDetail .containerProductsDetails .productDetailsBody .detailBodyContainerData .detailBodyDataProducto p{
+    font-size: 1.8rem;
+}
+
+.containerMainDetail .containerProductsDetails .productDetailsBody .detailBodyContainerData .detailBodyDataProducto .detailBodyPrice{
+    color: #776B5D;
+    font-weight: 600;
+    text-align: center;
+}
+
+.containerMainDetail .containerProductsDetails .productDetailsBody .detailBodyContainerData .detailBodyControles{
+    width: 100%;
+}
+
+.detailBodyStock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.detailBodyStock span{
+    align-items: center;
+}
+
+.btnRestar, .btnSumar{
+    padding: 1rem;
+    background-color: #776B5D;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.detailBodyComprar{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.btnComprar{
+    padding: 1rem;
+    background-color: #776B5D;
+    color: white;
+}
+
 .footerContainer{
     display: flex;
     justify-content: space-between;
@@ -80,7 +227,7 @@
 .container-footer-link a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 2rem;
     transition: all 0.5s ease-in-out;
 }
 

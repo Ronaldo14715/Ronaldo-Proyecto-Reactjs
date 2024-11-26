@@ -8,15 +8,17 @@ import FooterComponent from './components/FooterComponent'
 function App() {
 
   return (
-      <BrowserRouter>
-        <NavbarComponent />
-        <Routes>
-          <Route path='/' element={<ItemListContainer greeting='Bienvenidos'/>}/>
-          <Route path='/products/:category' element={<ItemListContainer greeting='Bienvenidos a la categoria: '/>}/>
-          <Route path='/item/:id' element={<ItemDetailContainer/>}/>
-        </Routes>
-        <FooterComponent />
-      </BrowserRouter>
+    <div className='mainContainer'>
+        <BrowserRouter>
+          <NavbarComponent />
+          <Routes>
+            <Route path='/' element={<ItemListContainer greeting='Bienvenidos'/>}/>
+            <Route path='/products/:category' element={<ItemListContainer greeting='Bienvenidos a la categoria: '/>}/>
+            <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+          </Routes>
+          <FooterComponent />
+        </BrowserRouter>
+    </div>
   )
 }
 

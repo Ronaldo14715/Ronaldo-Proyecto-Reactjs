@@ -22,8 +22,7 @@ const ItemListContainer = ({greeting, texto}) => {
         .finally(()=> setLoading(false))
     },[category])
     return(
-        <div>
-            <span style={{textTransform:'capitalize', color:'violet'}}>{category}</span>
+        <div className="containerMain">
             {loading ? <p>Cargando...</p> : <ItemList products={products} />}
         </div>
     )
