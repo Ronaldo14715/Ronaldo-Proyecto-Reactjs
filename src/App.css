@@ -112,7 +112,7 @@
     justify-content: center;
 }
 
-.containerMain .containerProducts .card .card-footer .card-button{
+.containerMain .containerProducts .card .card-footer .card-button, .btnGoToCart, .btnContinueShopping{
     padding: 0.8rem;
     width: 80%;
     background-color: #776B5D;
@@ -124,7 +124,7 @@
     font-weight: 800;
     transition: background-color 0.5s ease;
 }
-.containerMain .containerProducts .card .card-footer .card-button:hover{
+.containerMain .containerProducts .card .card-footer .card-button:hover , .btnGoToCart:hover, .btnContinueShopping:hover{
     background-color: #a0907d;
 }
 
@@ -210,7 +210,22 @@
     background-color: #776B5D;
     color: white;
 }
+.shoppingActions{
+    padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
 
+.loader{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cartWidget{
+    text-decoration: none;
+}
 .footerContainer{
     display: flex;
     justify-content: space-between;

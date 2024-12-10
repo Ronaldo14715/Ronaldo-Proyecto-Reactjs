@@ -11,7 +11,7 @@ const NavbarComponent = () =>{
                 <li><NavLink to='/products/ofertas' className="a-li-nav">OFERTAS</NavLink></li>
                 <li><NavLink to='/products/mas vendidos' className="a-li-nav">MAS VENDIDOS</NavLink></li>
             </ul>
-            <CartWidget counter={15} />
+            <NavLink to='/cart' className="cartWidget"> <CartWidget counter={15} /></NavLink>
         </nav>
     )
 
