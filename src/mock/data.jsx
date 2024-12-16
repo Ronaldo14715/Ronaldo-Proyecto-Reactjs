@@ -1,15 +1,5 @@
-const productos = [
+export const productosDB = [
     {
-        id: '1',
-        name: 'POLO NIKE',
-        stock: 5,
-        price: 40,
-        description: 'Polo Algodón Hombre Nike',
-        img: '../src/assets/img/polo1.webp',
-        category: 'nuevos'
-    },
-    {
-        id: '2',
         name: 'POLO ADIDAS',
         stock: 20,
         price: 30,
@@ -18,7 +8,6 @@ const productos = [
         category: 'ofertas'
     },
     {
-        id: '3',
         name: 'POLO PUMA',
         stock: 30,
         price: 50,
@@ -27,7 +16,6 @@ const productos = [
         category: 'mas vendidos'
     },
     {
-        id: '4',
         name: 'CASACA ADIDAS',
         stock: 20,
         price: 100,
@@ -36,7 +24,6 @@ const productos = [
         category: 'nuevos'
     },
     {
-        id: '5',
         name: 'CASACA LACOSTE',
         stock: 20,
         price: 250,
@@ -45,7 +32,6 @@ const productos = [
         category: 'ofertas'
     },
     {
-        id: '6',
         name: 'CASACA MLB',
         stock: 10,
         price: 200,
@@ -54,7 +40,6 @@ const productos = [
         category: 'mas vendidos'
     },
     {
-        id: '7',
         name: 'PANTALON LACOSTE',
         stock: 30,
         price: 150,
@@ -63,7 +48,6 @@ const productos = [
         category: 'nuevos'
     },
     {
-        id: '8',
         name: 'PANTALON QUIKSILVER',
         stock: 20,
         price: 200,
@@ -72,7 +56,6 @@ const productos = [
         category: 'ofertas'
     },
     {
-        id: '9',
         name: 'PANTALON LEVIS',
         stock: 30,
         price: 300,

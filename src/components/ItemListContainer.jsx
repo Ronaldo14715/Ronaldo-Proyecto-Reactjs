@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from "react"
-import { getProducts } from "../mock/data"
+import { getProducts, productosDB } from "../mock/data"
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
 import Loader from "./Loader"
-import { collection, getDocs, query, where } from "firebase/firestore"
+import { addDoc, collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "../services/firebase"
 
 const ItemListContainer = ({greeting, texto}) => {
@@ -24,9 +24,9 @@ const ItemListContainer = ({greeting, texto}) => {
                 }
             })
             setProducts(list)
-         })
-         .catch((error)=> console.log(error) )
-         .finally(()=> setLoading(false)) 
+        })
+        .catch((error)=> console.log(error) )
+        .finally(()=> setLoading(false)) 
     },[category])
     /*
     useEffect(()=>{
@@ -42,7 +42,12 @@ const ItemListContainer = ({greeting, texto}) => {
         .catch((error) => console.log(error))
         .finally(()=> setLoading(false))
     },[category])
-    */
+    
+   const appData = () =>{
+    const collectionToAdd = collection(db,"productos")
+    productosDB.map((item) => addDoc(collectionToAdd,item))
+    
+   }*/
     return(
         <div className="containerMain">
             {loading ? <Loader /> : <ItemList products={products} />}

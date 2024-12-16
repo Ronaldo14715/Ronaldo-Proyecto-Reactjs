@@ -6,6 +6,7 @@ import ItemDetailContainer from './components/ItemDetailContainer'
 import FooterComponent from './components/FooterComponent'
 import { CartProvider } from './content/CartContext'
 import CartView from './components/CartView'
+import CheckOut from './components/CheckOut'
 import Error from './components/Error'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path='/products/:category' element={<ItemListContainer greeting='Bienvenidos a la categoria: '/>}/>
             <Route path='/item/:id' element={<ItemDetailContainer/>}/>
             <Route path='/cart' element={<CartView />}/>
+            <Route path='/checkout' element={<CheckOut />}/>
             <Route path='*' element={<Error />}/>
           </Routes>
           <FooterComponent />
