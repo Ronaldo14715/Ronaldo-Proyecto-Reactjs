@@ -123,6 +123,9 @@
     font-size: 1.1rem;
     font-weight: 800;
     transition: background-color 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .containerMain .containerProducts .card .card-footer .card-button:hover , .btnGoToCart:hover, .btnContinueShopping:hover{
     background-color: #a0907d;
