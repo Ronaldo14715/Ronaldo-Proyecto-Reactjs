@@ -2,7 +2,7 @@
 
 Este proyecto es una aplicación web creada con **React.js** y **Vite**. Es una plataforma interactiva diseñada para mostrar las capacidades de una página moderna, rápida y optimizada para el desarrollo.
 
-![Proyecto de React](https://ibb.co/6yvd0F6)
+![Proyecto de React](./src/assets/img/proyect.jpg)
 
 ## Características
 
