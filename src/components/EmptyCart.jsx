@@ -4,10 +4,11 @@ import { Link } from 'react-router-dom'
 const EmptyCart = () => {
     
   return (
-    <div>
-        <h2>TU CARRITO ESTA VACIO</h2>
-        <h4>TE INVITAMOS A VER NUESTROS PRODUCTOS</h4>
-        <Link to='/' >Ir a comprar</Link>
+    <div className='carritoVacio'>
+        <div className='carritoVacioDetail'>
+          <h2>TU CARRITO ESTA VACIO</h2>
+          <Link className='btnInicio' to='/' >Ir a comprar</Link>
+        </div>
     </div>
   )
 }
