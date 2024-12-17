@@ -269,7 +269,7 @@
 .btnBorrarCarrito:hover{
     background-color: #f35771;
 }
-.btnTerminarCompra, .btnInicio{
+.btnTerminarCompra, .btnInicio, .btnHome{
     padding: 0.8rem;
     width: 80%;
     background-color: #776B5D;
@@ -284,8 +284,22 @@
     align-items: center;
     justify-content: center;
 }
-.btnTerminarCompra:hover, .btnInicio:hover{
+.btnHome{
+    margin-top: 1rem;
+    width: 100%;
+}
+.btnTerminarCompra:hover, .btnInicio:hover, .btnHome:hover{
     background-color: #a0907d;
+}
+.containerPayConfirm{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.containerPayConfirm h2,.containerPayConfirm p{
+    text-align: center;
+    font-family: 'poppins';
 }
 .btnInicio{
     width: 10%;
@@ -336,7 +350,7 @@
     width: 100%;
     margin-top: 1rem;
 }
-.eliminarProductoCarrito, .btnConfirmar{
+.eliminarProductoCarrito, .btnConfirmar, .errorBtnError{
     margin-bottom: 1rem;
     outline: auto;
     padding: 1rem 2rem 1rem 2rem;
@@ -345,7 +359,7 @@
     transition: background-color 0.5s ease;
     cursor: pointer;
 }
-.eliminarProductoCarrito:hover, .btnConfirmar:hover{
+.eliminarProductoCarrito:hover, .btnConfirmar:hover, .errorBtnError:hover{
     background-color: #a0907d;
 }
 .mainContainerCompra{
@@ -373,7 +387,21 @@
     padding: 1rem;
     font-size: 1rem;
 }
-
+.containerError{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.containerError p{
+    font-family: 'poppins';
+    font-size: 8rem;
+    color: #776B5D;
+}
+.errorBtnError{
+    text-decoration: none;
+}
 .loader{
     height: 100%;
     display: flex;

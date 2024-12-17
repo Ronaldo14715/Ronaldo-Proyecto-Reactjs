@@ -4,7 +4,8 @@ import { addDoc, collection, doc, getDoc, serverTimestamp, updateDoc } from 'fir
 import { db } from '../services/firebase'
 import { Link } from 'react-router-dom'
 import Loader from './Loader'
-
+import Toastify from 'toastify-js'
+import "toastify-js/src/toastify.css"
 
 const CheckOut = () => {
     const [loading,setLoading] = useState(false)
@@ -21,9 +22,41 @@ const CheckOut = () => {
     const finalizarCompra = (e) =>{
         e.preventDefault()
         if(!user.name || !user.lastname || !user.email || !user.address){
-            alert('los campos son obligatorios')
+            Toastify({
+                text: '<div style="font-family: Poppins; font-weight: bold;">❌ Completar todos campos.</div>',
+                duration: 4000,
+                newWindow: true,
+                gravity: "bottom",
+                position: "right", 
+                stopOnFocus: true,
+                style: {
+                    background: "linear-gradient(to right, #FF4C4C, #FF7373)",
+                    color: "#fff", // Texto blanco para contraste
+                    border: "2px solid #B22222", // Borde rojo oscuro
+                    borderRadius: "8px",
+                    padding: "1rem",
+                    boxShadow: "0px 4px 12px rgba(255, 0, 0, 0.4)"
+                },
+                escapeMarkup: false
+            }).showToast();
         }else if(user.email !== validateEmail){
-            alert('Los mails deben ser iguales')
+            Toastify({
+                text: '<div style="font-family: Poppins; font-weight: bold;">❌ Los correos deben ser iguales. </div>',
+                duration: 4000,
+                newWindow: true,
+                gravity: "bottom",
+                position: "right", 
+                stopOnFocus: true,
+                style: {
+                    background: "linear-gradient(to right, #FF4C4C, #FF7373)",
+                    color: "#fff", // Texto blanco para contraste
+                    border: "2px solid #B22222", // Borde rojo oscuro
+                    borderRadius: "8px",
+                    padding: "1rem",
+                    boxShadow: "0px 4px 12px rgba(255, 0, 0, 0.4)"
+                },
+                escapeMarkup: false
+            }).showToast();
         }else{
             let order = {
                 user: user,
@@ -49,13 +82,13 @@ const CheckOut = () => {
             .finally(() => setLoading(false))
         }
     }
-  return (
+    return (
         <div className='mainContainerCompra'>
             {loading ? <Loader /> : 
-             order !== '' ? <div>
-                <h4>Generaste bien tu orden</h4>
-                <h5>El id es : {order}</h5>
-                <Link to='/'>Volver al home</Link>
+            order !== '' ? <div className='containerPayConfirm'>
+                <h2>Generaste bien tu orden</h2>
+                <p>El ID de la compra es : <b>{order}</b></p>
+                <Link className="btnHome" to='/'>Volver al home</Link>
             </div>
             :
             <div className='containerForm'>
@@ -70,7 +103,7 @@ const CheckOut = () => {
                 </form>
             </div>}
         </div>
-  )
+    )
 }
 
 export default CheckOut

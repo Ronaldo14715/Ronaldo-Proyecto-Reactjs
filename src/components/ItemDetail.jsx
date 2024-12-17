@@ -10,17 +10,21 @@ const ItemDetail = ({producto}) => {
     const {addToCart,cart} = useContext(CartContext)
     const onAdd = (cantidad) =>{
       Toastify({
-        text: "Producto Agregado",
+        text: '<div style="font-family: poppins">Producto Agregado</div>',
         duration: 3000,
-        destination: "https://github.com/apvarun/toastify-js",
         newWindow: true,
-        close: true,
         gravity: "bottom",
         position: "right",
         stopOnFocus: true, 
         style: {
-          background: "linear-gradient(to right,rgb(29, 29, 28),rgb(58, 89, 226))",
-        }
+          background: "linear-gradient(to right, #8D7B68, #F4EDE3)",
+          color: "#2F2F2F", 
+          border: "2px solid #5F4C3B",
+          borderRadius: "8px",
+          padding: "1rem",
+          boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)"
+        },
+        escapeMarkup: false
       }).showToast();
       setCompra(true)
       addToCart(producto,cantidad)
